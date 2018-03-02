@@ -11,17 +11,50 @@
 #include<string.h>
 #include<stdlib.h>
 #include"llist.h"
-int main() 
-{
+#include"llist.c"
 
-	int choice, key, value, n, c;
-	//	clrscr();
- 
-	//	array = (struct arrayitem*) malloc(max * sizeof(struct arrayitem*));
-	//init_array();
- 
-        struct LList* array = (struct LList*) malloc(sizeof(struct LList*));
-	printf("LList strcut was included correctly\n");
+/** Array of lists, which make up the hashTable. Dynamically 
+    resizing hashTable. */
+struct LList* hashTable;
 
-	return 0;
+/** Atores the number of elements in the entire hash table. */
+int totalElements;
+
+/** Max Llists the hashTable can store. */
+int maxLists = 31339;
+
+/** Hashes the given int passed in. */
+int hashedString (int key)  {
+  return key % maxLists;
+}
+
+/** */
+struct node* get_elements(struct node *list, int find_index);
+
+/** */
+void remove_element(int key);
+
+/** */
+void rehash();
+
+/** */
+void init_array();
+
+/** */
+void insert (int key, char* str[]) {
+  float loadFactor = 0.0; // check if rehashing is needed
+
+  int hashIndex = hashcode(key);
+
+  // copy the list at the given slot in the hashTable
+  struct node *list = (struct node*) hashTable[hashIndex]->first;
+
+  // make the LLItem to add
+
+int main() {
+
+  hashTable = (struct LList*) malloc(31339 * sizeof(struct LList*) );
+
+  printf("HashTable struct was created correctly\n");
+  return 0;
 }

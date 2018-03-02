@@ -16,6 +16,7 @@
 typedef struct LLItem_s {
   struct LLItem_s *next;                                            //pointer to next LLItem_s instance
   char *str;                                                             //pointer to an array of chars
+  int key;
 } LLItem; // Why does the struct finish with 'LLItem'? ************************************************
 
 /* a list of LLItems */
@@ -27,7 +28,7 @@ extern int llDoCheck;	/* set true for paranoid consistency checking ????????????
 
 /*  !!!!!!!!!!!!  INTERFACE SECTION  !!!!!!!!!!!!! */
 /* create a new list */
-LList *llAlloc();
+LList *llAlloc() ;
 
 /* free memory associated with a list, discarding all items it contains */
 void llFree(LList *lp);
