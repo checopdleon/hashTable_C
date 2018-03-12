@@ -1,9 +1,9 @@
 /* !!!!!!!  DO NOT DELETE  !!!!!!!
    Author: Eric Freudenthal Ph.D, UTEP
-   Edits/addtions: Sergio Ponce De Leon, srosales4@miners.utep.edu
+   Edits/addtions: Sergio Ponce De Leon, checopdleon@gmail.com
    Course: Computer Architecture
    Project: #1, "Personnel Management System"
-   Last edit: Feb 28, 2018
+   Last edit: Mar 1, 2018
    COPYRIGHT 2018
    !!!!!!  DO NOT DELETE  !!!!!!!!
 */
