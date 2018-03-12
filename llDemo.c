@@ -2,7 +2,7 @@
 #include <stdlib.h>		/* for free() */
 #include <string.h> 		/* for strlen */
 #include "llist.h"		/* for list operations */
-
+#include "llist.c"
 
 /* read no more than limit chars into s, return #chars read.  Doesn't include trailing \n */
 int gets_n(char *s, int limit)	
