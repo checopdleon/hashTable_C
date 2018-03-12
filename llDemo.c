@@ -1,3 +1,13 @@
+/* !!!!!!!  DO NOT DELETE  !!!!!!!
+   Author: Eric Freudenthal Ph.D, UTEP
+   Edits/addtions: Sergio Ponce De Leon, checopdleon@gmail.com
+   Course: Computer Architecture
+   Project: #1, "Personnel Management System"
+   Last edit: Mar 12, 2018
+   COPYRIGHT 2018
+   !!!!!!  DO NOT DELETE  !!!!!!!!
+*/
+
 #include <stdio.h>		/* for printf */
 #include <stdlib.h>		/* for free() */
 #include <string.h> 		/* for strlen */

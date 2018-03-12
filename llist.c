@@ -3,7 +3,7 @@
    Edits/addtions: Sergio Ponce De Leon, checopdleon@gmail.com
    Course: Computer Architecture
    Project: #1, "Personnel Management System"
-   Last edit: Mar 1, 2018
+   Last edit: Mar 12, 2018
    COPYRIGHT 2018
    !!!!!!  DO NOT DELETE  !!!!!!!!
 */
@@ -80,7 +80,7 @@ void llMakeEmpty(LList *lp)
 int llFind (LList *lp, char *s)
 {
   int index = 0;
-  LLItem *iter = lp;
+  LLItem *iter = lp->first;
   while (iter != NULL)
     {
       // if the strings are the same when compared
