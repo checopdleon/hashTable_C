@@ -65,13 +65,22 @@ structMallocEgwoTypdef.c:61:41: error: no member named 'PI' in 'struct rec'
 
   THIRD ATTEMPT TO COMPILE generated same results
   CORRECTED STRUCT MEMBER NAME FROM 'Pi' TO 'PI'
+
+  FOURTH ATTEMPT TO COMPILE generated 1 warning:
+  structMallocEgwoTypdef.c:74:32: warning: format specifies type 'int' but the argument has type 'float'
+      [-Wformat]
+  printf("Second value: %d\n", ptr_one->PI);
+                        ~~     ^~~~~~~~~~~
+                        %f
+
+  CORRECTED DATATYPE FORMATTING FROM '%d' to '%f'
   */
   ptr_one->i = 10;
   ptr_one->PI = 3.14;
   ptr_one->A = 'a';
   
   printf("First value: %d\n", ptr_one->i);
-  printf("Second value: %d\n", ptr_one->PI);
+  printf("Second value: %f\n", ptr_one->PI);
   printf("Third value: %c\n", ptr_one->A);
 
   free(ptr_one);
