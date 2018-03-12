@@ -11,7 +11,8 @@
 #include <stdio.h>		/* for puts,  */
 #include <stdlib.h> 		/* for malloc */
 #include <assert.h>		/* for assert */
-#include "llist.h"		
+#include "llist.h"		/* for llists */
+#include <string.h>             /* for strings */
 
 int llDoCheck = 1;		/* set true for paranoid consistency checking */
 
@@ -72,6 +73,24 @@ void llMakeEmpty(LList *lp)
   lp->first = lp->last = 0;	/* list is empty */
   // recheck list for consistency
   doCheck(lp);
+}
+
+/* finds the given string in the llist and returns its index
+   within the llist or returns -1 when the string is not found */
+int llFind (LList *lp, char *s)
+{
+  int index = 0;
+  LLItem *iter = lp;
+  while (iter != NULL)
+    {
+      // if the strings are the same when compared
+      if (strcmp( s, (*iter).str) == 0) {return index;}
+
+      iter = (*iter).next;
+      index++;
+    }
+  // the string wasn't in the list
+  return -1;
 }
   
 /* append a copy of str to end of list */
