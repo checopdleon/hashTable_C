@@ -4,7 +4,7 @@
 struct rec
 {
   int i;
-  float Pi;
+  float PI;
   char A;
 };
 
@@ -52,6 +52,19 @@ structMallocEgwoTypdef.c:22:38: error: member reference type 'struct rec *' is a
                                      ->
 
   SWITCHING TO TRADITIONAL REFERENCING OF VALUES WITHIN STRUCTS
+
+  SECOND ATTEMPT TO COMPILE generated 2 errors:
+  structMallocEgwoTypdef.c:57:12: error: no member named 'PI' in 'struct rec'
+  ptr_one->PI = 3.14;
+  ~~~~~~~  ^
+structMallocEgwoTypdef.c:61:41: error: no member named 'PI' in 'struct rec'
+  printf("Second value: %d\n", ptr_one->PI);
+                               ~~~~~~~  ^
+
+  ERASED AND RETYPED INCASE OF EXTRA CHARACTER ADDED FROM CV'ING
+
+  THIRD ATTEMPT TO COMPILE generated same results
+  CORRECTED STRUCT MEMBER NAME FROM 'Pi' TO 'PI'
   */
   ptr_one->i = 10;
   ptr_one->PI = 3.14;
@@ -59,7 +72,7 @@ structMallocEgwoTypdef.c:22:38: error: member reference type 'struct rec *' is a
   
   printf("First value: %d\n", ptr_one->i);
   printf("Second value: %d\n", ptr_one->PI);
-  printf("Third value: %d\n", ptr_one->A);
+  printf("Third value: %c\n", ptr_one->A);
 
   free(ptr_one);
 
