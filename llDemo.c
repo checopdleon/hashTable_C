@@ -30,7 +30,7 @@ int main()
 
   llPrint(lp, "List contents, after building list:");
 
-  char *theABC[3] = "abc";
+  char *theABC = "abc";
   printf("The postion of 'abc' in the list is: %d\n", llFind(lp, theABC) );
 
   llMakeEmpty(lp);
