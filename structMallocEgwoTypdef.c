@@ -74,14 +74,18 @@ structMallocEgwoTypdef.c:61:41: error: no member named 'PI' in 'struct rec'
                         %f
 
   CORRECTED DATATYPE FORMATTING FROM '%d' to '%f'
+
+  FIFTH ATTEMPT TO COMPILE generated no errors
+  CONCLUSION
+  both dot and arrow struct member reference syntaxes are correct
   */
-  ptr_one->i = 10;
-  ptr_one->PI = 3.14;
-  ptr_one->A = 'a';
+  (*ptr_one).i = 10;
+  (*ptr_one).PI = 3.14;
+  (*ptr_one).A = 'a';
   
-  printf("First value: %d\n", ptr_one->i);
-  printf("Second value: %f\n", ptr_one->PI);
-  printf("Third value: %c\n", ptr_one->A);
+  printf("First value: %d\n", (*ptr_one).i);
+  printf("Second value: %f\n", (*ptr_one).PI);
+  printf("Third value: %c\n", (*ptr_one).A);
 
   free(ptr_one);
 
